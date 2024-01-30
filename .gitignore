@@ -5,3 +5,5 @@ Makefile
 *.user
 *.xpl
 *.so*
+
+*.obj

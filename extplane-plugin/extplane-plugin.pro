@@ -28,9 +28,10 @@ QT       -= gui
 CONFIG   += console warn_on shared c++11
 CONFIG   -= app_bundle
 CONFIG   -= debug_and_release
+CONFIG   -= mttq
 
 CONFIG += link_pkgconfig
-PKGCONFIG += libmosquittopp
+#PKGCONFIG += libmosquittopp
 
 TEMPLATE = lib
 
@@ -49,7 +50,7 @@ QMAKE_LFLAGS += -shared
 
 
 # Link to static library
-QMAKE_LFLAGS += ../extplane-server/libextplane-server.a
+QMAKE_LFLAGS += ../extplane-server/debug/extplane-server.lib
 
 #  -static-libgcc  <- fails on mac
 

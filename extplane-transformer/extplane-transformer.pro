@@ -2,12 +2,14 @@ QT += qml quick network
 
 CONFIG += c++11
 CONFIG -= debug_and_release
+CONFIG -= mqtt
+
 RESOURCES += qml.qrc
 
 INCLUDEPATH += ../extplane-server
 INCLUDEPATH += $$PWD/../util/
 DEPENDPATH += . ../extplane-server
-LIBS += -L../extplane-server -lextplane-server
+LIBS += -L../extplane-server/release -lextplane-server
 DESTDIR = .
 debug.DESTDIR = $$DESTDIR
 release.DESTDIR = $$DESTDIR

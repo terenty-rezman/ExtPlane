@@ -1,6 +1,8 @@
 TEMPLATE = lib
 CONFIG += staticlib c++11
 
+CONFIG -= mqtt
+
 include(../common.pri)
 
 # Needed for windows mxe build (hope this doesn't break anything..)

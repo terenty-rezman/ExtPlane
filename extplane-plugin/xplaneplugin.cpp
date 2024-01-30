@@ -310,7 +310,7 @@ void XPlanePlugin::addFMSEntryLatLon(QString fmsEntryLine){
         return;
     }
 
-    QStringList params = fmsEntryLine.split(",", Qt::SkipEmptyParts);
+    QStringList params = fmsEntryLine.split(",", QString::SkipEmptyParts);
     int id = params.value(0).toInt();
     float lat = params.value(1).toFloat();
     float lon = params.value(2).toFloat();

@@ -1,5 +1,7 @@
 TEMPLATE = subdirs
 
+CONFIG -= mqtt
+
 CONFIG(mqtt) {
     SUBDIRS += mqttpublisher
     message("Building with MQTT interface enabled")

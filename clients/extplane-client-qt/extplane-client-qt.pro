@@ -1,5 +1,7 @@
 QT       -= gui
 
+CONFIG -= mqtt
+
 TEMPLATE = lib
 CONFIG += staticlib c++11
 INCLUDEPATH += $$PWD/../../util/
