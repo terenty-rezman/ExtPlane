@@ -96,7 +96,7 @@ void TcpClient::readClient() {
         if(command == "disconnect") {
             DEBUG << "killing this client connection";
             disconnectClient();
-        } else if(command == "sub" || command == "get") { // Subscribe or get command
+        } else if(command == "sub" || command == "get" || command == "upd") { // Subscribe or get command
             if(subLine.length() >= 2) {
                 QString refName = subLine[1].trimmed();
 

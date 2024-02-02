@@ -50,7 +50,16 @@ QMAKE_LFLAGS += -shared
 
 
 # Link to static library
-QMAKE_LFLAGS += ../extplane-server/debug/extplane-server.lib
+#QMAKE_LFLAGS += ../extplane-server/debug/extplane-server.lib
+#QMAKE_LFLAGS += ../extplane-server/libextplane-server.a
+
+CONFIG(debug, debug|release) {
+    # Debug
+    QMAKE_LFLAGS += ../extplane-server/debug/extplane-server.lib
+} else {
+    # Release
+    QMAKE_LFLAGS += ../extplane-server/release/extplane-server.lib
+}
 
 #  -static-libgcc  <- fails on mac
 
