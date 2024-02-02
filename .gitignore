@@ -7,3 +7,4 @@ Makefile
 *.so*
 
 *.obj
+.qtc_clangd
